@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPF REAL</title>
+</head>
+<body>
+    <h1>CPF REAL</h1>
+   CPF: 
+   <input type="text" name="c1" id="c1" maxlength="1" style="font-size: 20px; vertical-align: middle; width: 20px; padding: 0; border: 2px solid green" maxlength="1">
+   <input type="text" name="c2" id="c2" maxlength="1" style="font-size: 20px; vertical-align: middle; width: 20px; padding: 0; border: 2px solid green" maxlength="1">
+   <input type="text" name="c3" id="c3" maxlength="1" style="font-size: 20px; vertical-align: middle; width: 20px; padding: 0; border: 2px solid green" maxlength="1">
+   <input type="text" name="c4" id="c4" maxlength="1" style="font-size: 20px; vertical-align: middle; width: 20px; padding: 0; border: 2px solid green" maxlength="1">
+   <input type="text" name="c5" id="c5" maxlength="1" style="font-size: 20px; vertical-align: middle; width: 20px; padding: 0; border: 2px solid green" maxlength="1">
+   <input type="text" name="c6" id="c6" maxlength="1" style="font-size: 20px; vertical-align: middle; width: 20px; padding: 0; border: 2px solid green" maxlength="1">
+   <input type="text" name="c7" id="c7" maxlength="1" style="font-size: 20px; vertical-align: middle; width: 20px; padding: 0; border: 2px solid green" maxlength="1">
+   <input type="text" name="c8" id="c8" maxlength="1" style="font-size: 20px; vertical-align: middle; width: 20px; padding: 0; border: 2px solid green" maxlength="1">
+   <input type="text" name="c9" id="c9" maxlength="1" style="font-size: 20px; vertical-align: middle; width: 20px; padding: 0; border: 2px solid green" maxlength="1">
+   <input type="text" name="c10" id="c10" maxlength="1" style="font-size: 20px; vertical-align: middle; width: 20px; padding: 0; border: 2px solid green" maxlength="1">
+   <input type="text" name="c11" id="c11" maxlength="1" style="font-size: 20px; vertical-align: middle; width: 20px; padding: 0; border: 2px solid green" maxlength="1">
+   
+    <input type="button" value="Verificar" onclick="somar()"> <!--insere um botão com o nome Verificar que ao ser clicado (onclick) chama função calcular() que será configurada no JS, na tag <script> -->
+            <div id="res"> <!--cria uma div id = res que deverá ser acessada e configurada no JS, na tag <script>-->
+        
+    </div>
+   <script>
+       function somar(){
+           var c1 = document.getElementById('c1')
+           var c2 = document.getElementById('c2')
+           var c3 = document.getElementById('c3')
+           var c4 = document.getElementById('c4')
+           var c5 = document.getElementById('c5')
+           var c6 = document.getElementById('c6')
+           var c7 = document.getElementById('c7')
+           var c8 = document.getElementById('c8')
+           var c9 = document.getElementById('c9')
+           var c10 = document.getElementById('c10')
+           var c11 = document.getElementById('c11')
+           var soma = Number(parseInt(c1.value) + parseInt(c2.value) + parseInt(c3.value) + parseInt(c4.value) + parseInt(c5.value) + parseInt(c6.value) + parseInt(c7.value) + parseInt(c8.value) + parseInt(c9.value) + parseInt(c10.value) + parseInt(c11.value))
+           alert(soma)
+       }
+   </script>
+    
+</html>

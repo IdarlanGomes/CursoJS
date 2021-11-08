@@ -1,0 +1,52 @@
+body{
+    background: rgb(2, 209, 255);
+    font: normal 15 pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 1px 1px 10px 10px  rgba(4, 32, 155, 0.323) ;
+}
+
+select#flista{
+    background: rgb(2, 209, 255);
+    color: white;
+}
+
+input#botao {
+    border: currentColor;
+    border-radius: 15px;
+    background: rgb(15, 234, 250);
+    
+    
+}
+
+input#botao:hover {
+    border: currentColor;
+    background: rgba(1, 147, 245, 0.685); 
+    
+    
+}
+
+select#flista{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 150px;
+    border-radius: 3px;
+    border: none;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}

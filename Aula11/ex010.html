@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>SISTEMA DE MULTAS</h1>
+    Velocidade Máxima permitida: <input type="number" name="max" id="max"><br>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h. <!--insere um campo onde o usuário deve digitar um valor-->
+    <input type="button" value="Verificar" onclick="calcular()"> <!--insere um botão com o nome Verificar que ao ser clicado (onclick) chama função calcular() que será configurada no JS, na tag <script> -->
+            <div id="res"> <!--cria uma div id = res que deverá ser acessada e configurada no JS, na tag <script>-->
+        Sua velocidade atual é de: 
+    </div>
+    <script>
+        function calcular(){ //configura a funão calcular
+            var max = document.getElementById('max')
+            var velmax = Number(max.value)
+            var txtv = document.getElementById('txtvel') //cria a variável txtv que receberá o valor digitado pelo usuário em <input id="txtvel"> que será acessada através do comando getElementById.
+            var res = document.querySelector('div#res') //cria a variável res que receberá o valor da div res que será acessada através do comando querySelector (para id: # e para class: .).
+            var vel = Number(txtv.value) //cria a variável vel que receberá o valor (value) numérico (Number) da variável txtv.
+            //res.innerHTML = `Sua velocidade atual é de: <strong>${txtv.value}</strong> Km/h! ` ou:
+            res.innerHTML = `<p>Sua velocidade atual é de: <strong>${vel}</strong> Km/h!<p> ` //escreve internamente (inner), com formatação HTML (innerHTML), na div res, o texto entre crases.
+            if(vel>velmax){
+                res.innerHTML += `<p><strong>MULTADO!</strong> Você ultrapassou a velocidade máxima permitida de ${velmax} Km/h!</p>`
+            }
+            res.innerHTML += `<p>Sempre dirija com cinto de segurança!</p>`   
+
+        }
+        
+    </script>
+</html>

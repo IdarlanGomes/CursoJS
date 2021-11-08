@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar CPF</title>
+</head>
+<body>
+    <h1>DIGITE O <strong>CPF</strong> NO CAMPO ABAIXO:</h1>
+    
+  
+    <div>
+         <!--type text para não aparece campo com setas para baixo e para cima, maxlength é o máximo de dígitos-->
+    <input type="text" name="c1" id="c1" placeholder="11122233344" maxlength="11" style="font-size: 20px; vertical-align: middle; width: 150px; padding: 5px; margin-top: 10px; border: 3px solid rgb(255, 67, 19); border-radius: 10px;"><br>
+    <!--cria o botão que recebe o nome (value) "Verificar" e chama a função soma() criada no JS-->
+    <input type="button" value="Verificar" onclick="soma()" style="margin-top: 15px; margin-bottom: 15px;">
+    
+    <input type="reset" value="Limpar" onclick="location.reload()"> <!--location.reload() recarrega á página-->
+    </div>
+    <!--cria uma div com id = res para escrever dentro do documento-->
+    <div id="res" style="font-size: 20px;"> 
+    Se a soma resultar em um número de dois dígitos iguais, por exemplo:<br>
+    11, 22, 33...<br>
+    Provavelmente, o CPF é válido!
+
+    </div>
+
+      
+
+        <script>
+            
+            function soma(){
+                var x = document.getElementById("c1") //c1 ou campo 1 recebido da tag input com o id = c1
+                var arr = x.value.split('') //separa os valores (value) inseridos em c1 para transformar em um array, por exemplo 1988 fica '1','9','8','8'
+                //parseInt para converter os valores do array em números inteiros pq estavam como strings, tentei com reduce mas não deu certo, pesquisar mais para diminuir essa parte
+                var sum =parseInt(arr[0])+parseInt(arr[1])+parseInt(arr[2])+parseInt(arr[3])+parseInt(arr[4])+parseInt(arr[5])+parseInt(arr[6])+parseInt(arr[7])+parseInt(arr[8])+parseInt(arr[9])+parseInt(arr[10])
+                //variável res recebe o id 'res'
+                var res = document.getElementById('res')
+                //.innerHTML (HTML maiúsculo mesmo) "escreve" no documento após o botão 'Verificar' ser acionado
+                res.innerHTML = ` Se a soma resultar em um número de dois dígitos iguais, por exemplo:<br>
+    11, 22, 33...<br>
+    Provavelmente, o CPF é válido!<br><br> <strong>A soma é igual a <u>${sum}</u>!</strong>`
+                
+            }
+         
+          
+
+            
+        </script>
+    
+</body>
+</html>

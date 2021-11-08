@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body{
+          background-color: rgb(95, 205, 248);  
+          color: cornsilk;
+          font: normal 18pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript!</p>
+    <div id = "msg">Clique em mim</div>
+    <script>
+        window.document.write('Olá, <strong>Mundo!</strong><br>')
+        window.document.write(window.document.charset)
+        window.document.write("<br>")
+        window.document.writeln(window.document.URL)
+        window.document.write("<br>")
+        window.document.write(window.navigator.userAgent)
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var p2 = window.document.getElementsByTagName('p')[1]
+        var corpo = window.document.body
+        var d = window.document.getElementById('msg')
+        window.document.write("<br>")
+        window.document.write("No primeiro parágrafo está escrito: " + p1.innerText) //.innerText copia o texto puro, sem formatação
+        p1.style.color = "orange"
+        corpo.style.background = "purple"
+        window.document.write('<br>')
+        window.document.write(p2.innerHTML) //.innerHTML copia o texto com a formataçã o HTML
+        d.style.background = 'black'
+        d.innerText = 'Estou aguardando...'
+        var q = window.document.querySelector('div#msg') //toda div é representada por # e toda classe por .
+        q.style.color = 'yellow'
+    </script>
+</body>
+</html>

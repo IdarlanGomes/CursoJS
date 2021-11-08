@@ -1,0 +1,30 @@
+<!DOCTYPE html> <!--tipo do documento-->
+<html lang="pt-br"> <!--linguagem utilizada, por padrão vem como "en", para português utilizamos "pt-br"-->
+<head> <!--cabeça do site, essa é a parte de configurações-->
+    <meta charset="UTF-8"> <!--habilita o uso de acentos "´ ^ ~"-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--configuração de conmpatibilidade entre os navegadores IE e edge-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--configuração de viewport-->
+    <title>Meu primeiro programa</title> <!--título que aparecerá na janela do site, por padrão vem como "Document"-->
+    <style> /*comentário em CSS*/
+        body{
+            background-color: rgb(186, 186, 248);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1{
+            color: crimson;
+        }
+    </style>
+</head> <!-- comentário em HTML-->
+<body> <!--corpo do site, essa é a parte visível no navegador-->
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>      
+    var n1=Number(prompt('Digite um número: ')); //exemplo: 10.2
+    var n2=Number(prompt('Digite outro número: ')) //exemplo: 10
+    var s=n1+n2 //20.2
+    alert (`A soma entre ${n1} e ${n2} é igual a ${s}!` );  /*usando template string (` `) e 
+    placeholders (${ })*/
+    </script>
+</body>
+</html>
